@@ -1,0 +1,2310 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+
+    background: #08030d;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* =====================================================
+   OPENING SCREEN
+===================================================== */
+
+#openingScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 5000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3b1235,
+            #08030d 70%
+        );
+
+    transition:
+        opacity 1.5s ease,
+        visibility 1.5s ease;
+}
+
+
+.opening-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 77, 145, .15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(161, 70, 255, .12),
+            transparent 30%
+        );
+}
+
+
+.opening-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(700px, 90%);
+
+    animation:
+        openingAppear 1.5s ease;
+}
+
+
+@keyframes openingAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.95);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+.gift-icon {
+
+    font-size: 90px;
+
+    margin-bottom: 25px;
+
+    animation:
+        giftFloat 2s ease-in-out infinite;
+}
+
+
+@keyframes giftFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+}
+
+
+.opening-small {
+
+    color: #ff9dc4;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+.opening-content h1 {
+
+    font-size:
+        clamp(40px, 7vw, 80px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.opening-content h1 span {
+
+    display: block;
+
+    color: #ff659e;
+}
+
+
+.opening-description {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    color: #bbb0ba;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+#openGiftButton {
+
+    margin-top: 40px;
+
+    border: 1px solid
+        rgba(255,255,255,.2);
+
+    border-radius: 100px;
+
+    padding: 17px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #b735ff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 50px
+        rgba(255, 65, 140, .25);
+
+    transition: .4s;
+}
+
+
+#openGiftButton:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 60px
+        rgba(255, 65, 140, .4);
+}
+
+
+.sound-note {
+
+    margin-top: 25px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+
+/* =====================================================
+   CINEMATIC INTRO
+===================================================== */
+
+#cinematicIntro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 4000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #020106;
+}
+
+
+.cinematic-content {
+
+    width: 90%;
+}
+
+
+.cinematic-line {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 90%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color: #ffffff;
+
+    font-size:
+        clamp(24px, 5vw, 60px);
+
+    opacity: 0;
+}
+
+
+.cinematic-line.line-1 {
+
+    animation:
+        cinematicLine 4s ease forwards;
+}
+
+
+.cinematic-line.line-2 {
+
+    animation:
+        cinematicLine 4s ease forwards;
+
+    animation-delay: 3.5s;
+}
+
+
+.cinematic-line.line-3 {
+
+    animation:
+        cinematicLine 4s ease forwards;
+
+    animation-delay: 7s;
+
+    color: #ff6da4;
+}
+
+
+.cinematic-line.line-4 {
+
+    animation:
+        cinematicLine 4s ease forwards;
+
+    animation-delay: 10.5s;
+}
+
+
+@keyframes cinematicLine {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.9);
+    }
+
+    25% {
+
+        opacity: 1;
+    }
+
+    65% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.05);
+    }
+}
+
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+#countdownScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #32102f,
+            #07030b 70%
+        );
+}
+
+
+.countdown-content {
+
+    width: min(1000px, 90%);
+}
+
+
+.countdown-label {
+
+    color: #ff9dc4;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.countdown-content h1 {
+
+    font-size:
+        clamp(38px, 7vw, 80px);
+
+    line-height: 1.1;
+
+    margin-bottom: 50px;
+}
+
+
+.countdown-content h1 span {
+
+    display: block;
+
+    color: #ff5c98;
+}
+
+
+#countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.time-box {
+
+    width: 130px;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.3);
+}
+
+
+.time-box strong {
+
+    display: block;
+
+    font-size: 48px;
+
+    color: white;
+}
+
+
+.time-box span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #ff9dc4;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+.countdown-bottom {
+
+    margin-top: 45px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+
+/* =====================================================
+   FIREWORKS
+===================================================== */
+
+#fireworksScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2500;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #020106;
+
+    overflow: hidden;
+
+    transition:
+        opacity 2s ease;
+}
+
+
+#fireworksCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.fireworks-text {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    animation:
+        fireworksAppear 2s ease forwards;
+}
+
+
+.fireworks-text p {
+
+    color: #ff9ec5;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+
+.fireworks-text h1 {
+
+    font-size:
+        clamp(40px, 9vw, 110px);
+
+    text-shadow:
+        0 0 15px white,
+        0 0 35px #ff4f91,
+        0 0 70px #ff4f91;
+}
+
+
+.fireworks-text h2 {
+
+    margin-top: 10px;
+
+    font-size:
+        clamp(30px, 6vw, 70px);
+
+    color: #ff6da4;
+}
+
+
+@keyframes fireworksAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.5);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+
+/* =====================================================
+   MAIN WEBSITE
+===================================================== */
+
+#mainWebsite {
+
+    display: none;
+
+    opacity: 0;
+
+    transition:
+        opacity 2s ease;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #48142f,
+            #08030d 65%
+        );
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 850px;
+}
+
+
+.hero-small {
+
+    color: #ff9fc6;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-content h1 {
+
+    font-size:
+        clamp(50px, 10vw, 120px);
+
+    line-height: .95;
+}
+
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: #ff5f99;
+
+    text-shadow:
+        0 0 30px
+        rgba(255, 95, 153, .3);
+}
+
+
+.hero-description {
+
+    margin: 35px auto;
+
+    max-width: 650px;
+
+    color: #c5bbc3;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+.hero-heart {
+
+    font-size: 80px;
+
+    margin: 30px;
+
+    animation:
+        heartbeat 1.4s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.25);
+    }
+}
+
+
+.scroll-button {
+
+    border: 0;
+
+    border-radius: 100px;
+
+    padding: 15px 30px;
+
+    background: #ff4f91;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.scroll-button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(255,79,145,.35);
+}
+
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.floating-hearts span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: .4;
+
+    animation:
+        floatHeart 12s linear infinite;
+}
+
+
+.floating-hearts span:nth-child(1) {
+
+    left: 10%;
+
+    animation-delay: 0s;
+}
+
+
+.floating-hearts span:nth-child(2) {
+
+    left: 25%;
+
+    animation-delay: 3s;
+}
+
+
+.floating-hearts span:nth-child(3) {
+
+    left: 40%;
+
+    animation-delay: 5s;
+}
+
+
+.floating-hearts span:nth-child(4) {
+
+    left: 55%;
+
+    animation-delay: 1s;
+}
+
+
+.floating-hearts span:nth-child(5) {
+
+    left: 70%;
+
+    animation-delay: 4s;
+}
+
+
+.floating-hearts span:nth-child(6) {
+
+    left: 82%;
+
+    animation-delay: 6s;
+}
+
+
+.floating-hearts span:nth-child(7) {
+
+    left: 92%;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: .5;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+
+/* =====================================================
+   COMMON SECTIONS
+===================================================== */
+
+section {
+
+    position: relative;
+}
+
+
+.section-container {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 110px 0;
+}
+
+
+.section-label {
+
+    color: #ff669f;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.section-container h2 {
+
+    font-size:
+        clamp(35px, 6vw, 70px);
+
+    line-height: 1.1;
+
+    margin-bottom: 50px;
+}
+
+
+.section-container h2 span {
+
+    color: #ff6099;
+}
+
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-section {
+
+    background: #0e0610;
+
+    text-align: center;
+}
+
+
+.typing-container {
+
+    max-width: 750px;
+
+    min-height: 400px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    text-align: left;
+}
+
+
+#typingText {
+    color: #d6cbd3;
+    font-size: 17px;
+    line-height: 2;
+    white-space: pre-line;
+    letter-spacing: 0.2px;
+}
+
+
+.typing-cursor {
+
+    color: #ff5f99;
+
+    animation:
+        cursorBlink .8s infinite;
+}
+
+
+@keyframes cursorBlink {
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+/* =====================================================
+   FLOATING PHOTOS
+===================================================== */
+
+.floating-photo-section {
+
+    background: #08030d;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+.floating-photo-area {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 650px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.memory-photo {
+
+    position: absolute;
+
+    width: 220px;
+
+    padding: 10px;
+
+    background: #fff;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.4);
+
+    transition: .5s;
+}
+
+
+.memory-photo img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+}
+
+
+.memory-photo:hover {
+
+    z-index: 20;
+
+    transform:
+        scale(1.1)
+        rotate(0deg) !important;
+}
+
+
+.photo-a {
+
+    left: 5%;
+
+    top: 80px;
+
+    transform: rotate(-12deg);
+}
+
+
+.photo-b {
+
+    left: 28%;
+
+    top: 20px;
+
+    transform: rotate(7deg);
+}
+
+
+.photo-c {
+
+    right: 5%;
+
+    top: 70px;
+
+    transform: rotate(12deg);
+}
+
+
+.photo-d {
+
+    left: 12%;
+
+    bottom: 30px;
+
+    transform: rotate(7deg);
+}
+
+
+.photo-e {
+
+    right: 28%;
+
+    bottom: 10px;
+
+    transform: rotate(-8deg);
+}
+
+
+.photo-f {
+
+    right: 8%;
+
+    bottom: 60px;
+
+    transform: rotate(6deg);
+}
+
+
+.photo-center {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 10;
+
+    width: 160px;
+
+    height: 160px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #42112f,
+            #120610
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    box-shadow:
+        0 0 80px
+        rgba(255,60,140,.2);
+}
+
+
+.photo-center div {
+
+    font-size: 40px;
+}
+
+
+.photo-center p {
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+
+    background: #100710;
+}
+
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.gallery-item {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    aspect-ratio: 4 / 5;
+
+    background: #181018;
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.08);
+}
+
+
+.gallery-caption {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 25px 20px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+
+    color: white;
+
+    padding-top: 70px;
+}
+
+
+.gallery-caption span {
+
+    color: #ff649c;
+
+    margin-right: 10px;
+}
+
+
+/* =====================================================
+   WHATSAPP CONVERSATION VIDEO
+===================================================== */
+
+.conversation-section {
+    position: relative;
+    background:
+        radial-gradient(
+            circle at center,
+            #25111c,
+            #0d080d 70%
+        );
+}
+
+.conversation-intro {
+    max-width: 600px;
+    margin: -20px auto 45px;
+    text-align: center;
+    color: #b9abb3;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   PHONE FRAME
+===================================================== */
+
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.phone {
+    position: relative;
+
+    width: 360px;
+    max-width: 90vw;
+
+    background: #111;
+
+    border: 8px solid #1c1c1c;
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, .55),
+        0 0 0 1px rgba(255, 255, 255, .08);
+
+    transition: transform .5s ease,
+                box-shadow .5s ease;
+}
+
+.phone:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, .65),
+        0 0 35px rgba(255, 96, 153, .12);
+}
+
+
+/* =====================================================
+   WHATSAPP HEADER
+===================================================== */
+
+.whatsapp-header {
+    position: relative;
+
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8px 10px;
+
+    background: #202c33;
+
+    color: white;
+
+    gap: 8px;
+}
+
+.whatsapp-back {
+    width: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #d9e1e5;
+
+    font-size: 28px;
+}
+
+.profile-circle {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6099,
+            #ff8db6
+        );
+
+    font-size: 18px;
+}
+
+.whatsapp-contact {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.whatsapp-contact strong {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.whatsapp-contact small {
+    margin-top: 2px;
+
+    color: #aebac1;
+
+    font-size: 11px;
+}
+
+.whatsapp-icons {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    color: #d9e1e5;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CONVERSATION VIDEO
+===================================================== */
+
+.conversation-video {
+    position: relative;
+
+    width: 100%;
+
+    background: #000;
+
+    overflow: hidden;
+
+    line-height: 0;
+}
+
+.conversation-video video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    background: #000;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.conversation-note {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #9f9199;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .conversation-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .phone {
+        width: 330px;
+
+        border-width: 6px;
+        border-radius: 30px;
+    }
+
+    .whatsapp-header {
+        height: 58px;
+    }
+
+    .whatsapp-icons {
+        gap: 10px;
+    }
+
+    .conversation-intro {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   VOICE
+===================================================== */
+
+.voice-section {
+
+    background: #100710;
+}
+
+
+.voice-list {
+
+    max-width: 800px;
+}
+
+
+.voice-card {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    transition: .4s;
+}
+
+
+.voice-card:hover {
+
+    transform: translateX(8px);
+
+    border-color:
+        rgba(255,95,153,.4);
+}
+
+
+.voice-number {
+
+    font-size: 25px;
+
+    color: #ff5f99;
+}
+
+
+.voice-details {
+
+    flex: 1;
+}
+
+
+.voice-details h3 {
+
+    margin-bottom: 7px;
+}
+
+
+.voice-details p {
+
+    color: #888;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+
+.voice-details audio {
+
+    width: 100%;
+}
+
+
+
+/* =====================================================
+   STORY TIMELINE
+===================================================== */
+
+.story-section {
+
+    background: #08030d;
+}
+
+
+.timeline {
+
+    position: relative;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(
+            #ff4f91,
+            transparent
+        );
+}
+
+
+.timeline-item {
+
+    position: relative;
+
+    width: 50%;
+
+    padding: 20px 45px;
+}
+
+
+.timeline-item:nth-child(odd) {
+
+    left: 0;
+
+    text-align: right;
+}
+
+
+.timeline-item:nth-child(even) {
+
+    left: 50%;
+}
+
+
+.timeline-dot {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: -22px;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #210b1c;
+
+    border:
+        1px solid
+        #ff4f91;
+
+    z-index: 5;
+}
+
+
+.timeline-item:nth-child(even)
+.timeline-dot {
+
+    left: -22px;
+
+    right: auto;
+}
+
+
+.timeline-card {
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+
+.timeline-card span {
+
+    color: #ff5f99;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+.timeline-card h3 {
+
+    margin: 10px 0 15px;
+
+    font-size: 22px;
+}
+
+
+.timeline-card p {
+
+    color: #aaa;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+/* =====================================================
+   BIRTHDAY WISH VIDEO
+===================================================== */
+
+.video-section {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #321122,
+            #100a10 65%
+        );
+
+    text-align: center;
+}
+
+
+/* VIDEO INTRO */
+
+.video-intro {
+
+    max-width: 600px;
+
+    margin:
+        -20px
+        auto
+        45px;
+
+    color: #b9abb3;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* VIDEO CONTAINER */
+
+.birthday-video-container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+/* VIDEO CARD */
+
+.video-card {
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.02)
+        );
+
+    border:
+        1px solid
+        rgba(255,105,150,.2);
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.45);
+
+    transition: .5s ease;
+}
+
+
+.video-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(255,105,150,.4);
+
+    box-shadow:
+        0 35px 100px
+        rgba(0,0,0,.55);
+}
+
+
+/* VIDEO */
+
+.video-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    background: #030204;
+
+    overflow: hidden;
+}
+
+
+.video-wrapper video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: contain;
+
+    background: #030204;
+}
+
+
+/* VIDEO MESSAGE */
+
+.video-message {
+
+    text-align: center;
+
+    padding:
+        35px
+        30px
+        40px;
+}
+
+
+.video-heart {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 1.4s infinite;
+}
+
+
+.video-message h3 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size: 35px;
+
+    color: #ff7099;
+
+    margin-bottom: 10px;
+}
+
+
+.video-message p {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #b9abb3;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   VIDEO MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .video-section {
+
+        padding:
+            80px
+            5%;
+    }
+
+
+    .video-card {
+
+        border-radius: 20px;
+    }
+
+
+    .video-message {
+
+        padding:
+            30px
+            20px
+            35px;
+    }
+
+
+    .video-message h3 {
+
+        font-size: 30px;
+    }
+
+
+    .video-intro {
+
+        font-size: 13px;
+
+        margin-bottom: 35px;
+    }
+
+}
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #47102f,
+            #08030d 70%
+        );
+}
+
+
+.final-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+
+.final-heart {
+
+    font-size: 90px;
+
+    animation:
+        heartbeat 1.4s infinite;
+}
+
+
+.final-small {
+
+    margin-top: 30px;
+
+    color: #ff9fc4;
+
+    letter-spacing: 3px;
+}
+
+
+.final-content h2 {
+
+    margin: 25px 0 40px;
+
+    font-size:
+        clamp(40px, 7vw, 80px);
+}
+
+
+.final-content h2 span {
+
+    display: block;
+
+    color: #ff6099;
+}
+
+
+.final-message {
+
+    color: #c8bdc6;
+
+    font-size: 17px;
+
+    line-height: 2;
+}
+
+
+.final-message strong {
+
+    color: #ff669f;
+
+    font-size: 25px;
+}
+
+
+.final-content h1 {
+
+    margin-top: 60px;
+
+    font-size:
+        clamp(40px, 8vw, 90px);
+}
+
+
+.final-content h1 span {
+
+    display: block;
+
+    color: #ff5f99;
+}
+
+
+.forever {
+
+    margin-top: 35px;
+
+    color: #a99ca6;
+
+    line-height: 2;
+}
+
+
+.signature {
+
+    margin-top: 40px;
+
+    color: #ff8eb6;
+
+    line-height: 1.8;
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+
+    #countdown {
+
+        gap: 8px;
+    }
+
+
+    .time-box {
+
+        width: 75px;
+
+        padding: 15px 8px;
+    }
+
+
+    .time-box strong {
+
+        font-size: 28px;
+    }
+
+
+    .time-box span {
+
+        font-size: 9px;
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .floating-photo-area {
+
+        height: 850px;
+    }
+
+
+    .memory-photo {
+
+        width: 160px;
+    }
+
+
+    .memory-photo img {
+
+        height: 190px;
+    }
+
+
+    .photo-a {
+
+        left: 0;
+
+        top: 50px;
+    }
+
+
+    .photo-b {
+
+        right: 0;
+
+        left: auto;
+
+        top: 80px;
+    }
+
+
+    .photo-c {
+
+        left: 10px;
+
+        right: auto;
+
+        top: 320px;
+    }
+
+
+    .photo-d {
+
+        right: 0;
+
+        left: auto;
+
+        bottom: 270px;
+    }
+
+
+    .photo-e {
+
+        left: 10px;
+
+        right: auto;
+
+        bottom: 20px;
+    }
+
+
+    .photo-f {
+
+        right: 0;
+
+        bottom: 30px;
+    }
+
+
+    .photo-center {
+
+        width: 120px;
+
+        height: 120px;
+
+        top: 50%;
+    }
+
+
+    .photo-center div {
+
+        font-size: 30px;
+    }
+
+
+    .timeline::before {
+
+        left: 20px;
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+
+        width: 100%;
+
+        left: 0;
+
+        padding:
+            20px
+            20px
+            20px
+            60px;
+
+        text-align: left;
+    }
+
+
+    .timeline-dot,
+    .timeline-item:nth-child(even)
+    .timeline-dot {
+
+        left: -2px;
+
+        right: auto;
+    }
+
+
+    .voice-card {
+
+        align-items: flex-start;
+    }
+
+
+    .voice-number {
+
+        font-size: 18px;
+    }
+
+
+}
+
+
+@media (max-width: 450px) {
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 52px;
+    }
+
+
+    .opening-content h1 {
+
+        font-size: 42px;
+    }
+
+}
+
+.conversation-section .phone {
+    overflow: hidden !important;
+}
+
+.conversation-section .conversation-video {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.conversation-section .conversation-video video {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: 100% !important;
+
+    transform: none !important;
+}

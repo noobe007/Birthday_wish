@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#08030d">
+
+    <title>For My Love ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     BACKGROUND MUSIC
+===================================================== -->
+
+<audio id="backgroundMusic"
+       src="media/music.mp3"
+       loop>
+</audio>
+
+
+<!-- =====================================================
+     OPEN GIFT SCREEN
+===================================================== -->
+
+<section id="openingScreen">
+
+    <div class="opening-background"></div>
+
+    <div class="opening-content">
+
+        <div class="gift-icon">
+            🎁
+        </div>
+
+        <p class="opening-small">
+            I made something special for you...
+        </p>
+
+        <h1>
+            A little surprise
+            <span>from my heart ❤️</span>
+        </h1>
+
+        <p class="opening-description">
+            There are memories here,
+            little pieces of us,
+            and a message I've been waiting
+            to give you.
+        </p>
+
+        <button id="openGiftButton">
+
+            <span>Tap to Open Your Gift</span>
+
+            ❤️
+
+        </button>
+
+        <p class="sound-note">
+            🔊 Turn on your sound for the full experience
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CINEMATIC INTRO
+===================================================== -->
+
+<section id="cinematicIntro">
+
+    <div class="cinematic-content">
+
+        <p class="cinematic-line line-1">
+            There are billions of people in this world...
+        </p>
+
+        <p class="cinematic-line line-2">
+            but somehow...
+        </p>
+
+        <p class="cinematic-line line-3">
+            I found you. ❤️
+        </p>
+
+        <p class="cinematic-line line-4">
+            And that changed everything.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section id="countdownScreen">
+
+    <div class="countdown-background"></div>
+
+    <div class="countdown-content">
+
+        <p class="countdown-label">
+            Something beautiful is about to begin...
+        </p>
+
+        <h1>
+            Your special moment
+            <span>is almost here ❤️</span>
+        </h1>
+
+
+        <div id="countdown">
+
+            <div class="time-box">
+
+                <strong id="days">
+                    00
+                </strong>
+
+                <span>
+                    Days
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="hours">
+                    00
+                </strong>
+
+                <span>
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="minutes">
+                    00
+                </strong>
+
+                <span>
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <strong id="seconds">
+                    00
+                </strong>
+
+                <span>
+                    Seconds
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <p class="countdown-bottom">
+            I'm counting every second until I can say...
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FIREWORKS
+===================================================== -->
+
+<section id="fireworksScreen">
+
+    <canvas id="fireworksCanvas"></canvas>
+
+    <div class="fireworks-text">
+
+        <p>
+            🎆 The moment has arrived 🎆
+        </p>
+
+        <h1>
+            HAPPY BIRTHDAY
+        </h1>
+
+        <h2>
+            MY LOVE ❤️
+        </h2>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="mainWebsite">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero-section">
+
+    <div class="floating-hearts">
+
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            To the most special person in my life
+        </p>
+
+        <h1>
+
+            Happy Birthday
+
+            <span>
+                My Love ❤️
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Today isn't just another day.
+
+            <br><br>
+
+            Today is the day
+            the person who means
+            so much to me
+            came into this world.
+
+        </p>
+
+
+        <div class="hero-heart">
+            ❤️
+        </div>
+
+
+        <button
+            class="scroll-button"
+            onclick="scrollToSection('letter')">
+
+            Begin Our Story ↓
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TYPING LOVE LETTER
+===================================================== -->
+
+<section id="letter"
+         class="letter-section">
+
+    <div class="section-container">
+
+        <p class="section-label">
+            From my heart
+        </p>
+
+        <h2>
+            A letter
+            <span>for you ❤️</span>
+        </h2>
+
+
+        <div class="typing-container">
+
+            <p id="typingText"></p>
+
+            <span class="typing-cursor">
+                |
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FLOATING PHOTO MEMORY
+===================================================== -->
+
+<section class="floating-photo-section">
+
+    <div class="section-container">
+
+        <p class="section-label">
+            A few pieces of us
+        </p>
+
+        <h2>
+            Memories I
+            <span>never want to lose</span>
+        </h2>
+
+
+        <div class="floating-photo-area">
+
+
+            <div class="memory-photo photo-a">
+
+                <img
+                    src="media/photo1.jpeg"
+                    alt="Our memory">
+
+            </div>
+
+
+            <div class="memory-photo photo-b">
+
+                <img
+                    src="media/photo2.jpeg"
+                    alt="Our memory">
+
+            </div>
+
+
+            <div class="memory-photo photo-c">
+
+                <img
+                    src="media/photo3.jpeg"
+                    alt="Our memory">
+
+            </div>
+
+
+            <div class="memory-photo photo-d">
+
+                <img
+                    src="media/photo4.jpeg"
+                    alt="Our memory">
+
+            </div>
+
+
+            <div class="memory-photo photo-e">
+
+                <img
+                    src="media/photo5.jpeg"
+                    alt="Our memory">
+
+            </div>
+
+
+            <div class="memory-photo photo-f">
+
+                <img
+                    src="media/photo6.jpeg"
+                    alt="Our memory">
+
+            </div>
+
+
+            <div class="photo-center">
+
+                <div>
+                    ❤️
+                </div>
+
+                <p>
+                    Our memories
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+    <div class="section-container">
+
+        <p class="section-label">
+            Our memories
+        </p>
+
+        <h2>
+            Every picture
+            <span>has a story 📸</span>
+        </h2>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="media/sphoto1.jpeg"
+                    alt="Memory">
+
+                <div class="gallery-caption">
+                    <span>01</span>
+                    One of my favorite moments ❤️
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="media/sphoto2.jpeg"
+                    alt="Memory">
+
+                <div class="gallery-caption">
+                    <span>02</span>
+                    That smile...
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="media/sphoto3.jpeg"
+                    alt="Memory">
+
+                <div class="gallery-caption">
+                    <span>03</span>
+                    Just us.
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="media/sphoto6.jpeg"
+                    alt="Memory">
+
+                <div class="gallery-caption">
+                    <span>04</span>
+                    A memory worth keeping.
+                </div>
+
+            </div>
+
+            <div class="gallery-item">
+
+                <img
+                    src="media/sphoto4.jpeg"
+                    alt="Memory">
+
+                <div class="gallery-caption">
+                    <span>05</span>
+                    Forever one of my favorites.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHATSAPP CONVERSATION VIDEO
+===================================================== -->
+
+<section class="conversation-section">
+
+    <div class="section-container">
+
+        <p class="section-label">Little Conversations 💬</p>
+
+        <h2>
+            Our Little
+            <span>Conversations ❤️</span>
+        </h2>
+
+        <p class="conversation-intro">
+            Some conversations are too special to be forgotten.
+            So I saved one of them here. ❤️
+        </p>
+
+        <div class="phone-container">
+
+            <div class="phone">
+
+                <!-- WhatsApp Header -->
+                <div class="whatsapp-header">
+
+                    <div class="whatsapp-back">
+                        <span>‹</span>
+                    </div>
+
+                    <div class="profile-circle">
+                        ❤️
+                    </div>
+
+                    <div class="whatsapp-contact">
+                        <strong>My Life ❤️</strong>
+                        <small>online</small>
+                    </div>
+
+                    <div class="whatsapp-icons">
+                        <span>📹</span>
+                        <span>⋮</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Conversation Screen Recording -->
+                <div class="conversation-video">
+
+                    <video
+                        id="conversationVideo"
+                        controls
+                        playsinline
+                        preload="metadata">
+
+                        <source
+                            src="media/wvideo.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="conversation-note">
+            A little piece of our story that I never want to forget. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VOICE MESSAGES
+===================================================== -->
+
+<section class="voice-section">
+
+    <div class="section-container">
+
+        <p class="section-label">
+            Hear our memories
+        </p>
+
+        <h2>
+            Your voice
+            <span>is one of my favorite sounds 🎙️</span>
+        </h2>
+
+
+        <div class="voice-list">
+
+
+            <div class="voice-card">
+
+                <div class="voice-number">
+                    01
+                </div>
+
+                <div class="voice-details">
+
+                    <h3>
+                        That conversation ❤️
+                    </h3>
+
+                    <p>
+                        A little moment
+                        I wanted to keep.
+                    </p>
+
+                    <audio controls>
+
+                        <source
+                            src="media/voice2.mp3"
+                            type="audio/mp3">
+
+                    </audio>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="voice-card">
+
+                <div class="voice-number">
+                    02
+                </div>
+
+                <div class="voice-details">
+
+                    <h3>
+                        Your laugh
+                    </h3>
+
+                    <p>
+                        One of those sounds
+                        that makes everything better.
+                    </p>
+
+                    <audio controls>
+
+                        <source
+                            src="media/voice1.mp3"
+                            type="audio/mp3">
+
+                    </audio>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="voice-card">
+
+                <div class="voice-number">
+                    03
+                </div>
+
+                <div class="voice-details">
+
+                    <h3>
+                        One more memory
+                    </h3>
+
+                    <p>
+                        Something I never
+                        want to forget.
+                    </p>
+
+                    <audio controls>
+
+                        <source
+                            src="media/voice3.mp3"
+                            type="audio/mp3">
+
+                    </audio>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR STORY TIMELINE
+===================================================== -->
+
+<section class="story-section">
+
+    <div class="section-container">
+
+        <p class="section-label">
+            Our journey
+        </p>
+
+        <h2>
+            Our Story
+            <span>❤️</span>
+        </h2>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ❤️
+                </div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        The beginning
+                    </span>
+
+                    <h3>
+                        The day we met
+                    </h3>
+
+                    <p>
+
+                        The first time I saw you was in real life.
+
+The moment I saw you, I found myself looking at you. There was something about you that caught my attention. I was curious, and I kept wondering, “Why did she look at me?”
+
+It was just a small moment. Nothing seemed special about it at the time.
+
+But somehow, that one little moment became the beginning of everything.
+
+And now, when I look back, it makes me smile knowing that one simple moment has brought us this far. ❤️
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    💬
+                </div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        First conversations
+                    </span>
+
+                    <h3>
+                        When talking became a habit
+                    </h3>
+
+                    <p>
+
+                        The first time you came into my life was through a follow from an account I didn’t recognize.
+
+I was curious about who you were, so I went to check your profile. After that, I simply texted you, “Hi.”
+
+I got a reply from the other side.
+
+But honestly, I never expected that one little reply to change my life.
+
+That day, you told me who you were, although I don’t think I really knew much about you at the time. Then, somehow, we ended up talking for the whole next day.
+
+It was only after that that I really started to know you.
+
+And honestly, I thought you probably wouldn’t talk to me after that. But you did. You kept talking to me, and our conversations just continued.
+
+Maybe that was the real beginning of us.
+
+It all started with one follow, one “Hi,” and one reply.
+
+And look how far that little beginning has brought us. ❤️
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    😊
+                </div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        A special moment
+                    </span>
+
+                    <h3>
+                        The memory I'll always keep
+                    </h3>
+
+                    <p>
+
+                        Our last meet was really special to me.
+
+I remember thinking that I never wanted to forget that moment. I don’t even know how that one hour passed so quickly.
+
+But what made it so special was how comfortable I felt with you. I was just sitting there, talking to you, and somehow everything felt so natural.
+
+I don’t really know how to explain it.
+
+I just know that, for that one hour, being with you felt incredibly comfortable and peaceful.
+
+Maybe that’s what made that moment so special to me. ❤️
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ❤️
+                </div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        Today
+                    </span>
+
+                    <h3>
+                        Your birthday
+                    </h3>
+
+                    <p>
+
+                        And here we are...
+
+                        Celebrating you.
+
+                        Celebrating us.
+
+                        And celebrating every
+                        memory that brought us here.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item future">
+
+                <div class="timeline-dot">
+                    ♾️
+                </div>
+
+                <div class="timeline-card">
+
+                    <span>
+                        The future
+                    </span>
+
+                    <h3>
+                        To be continued...
+                    </h3>
+
+                    <p>
+
+                        Because our story
+                        isn't finished yet. ❤️
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     BIRTHDAY WISH VIDEO
+================================================== -->
+
+<!-- <section class="video-section">
+
+    <div class="section-container">
+
+    <p class="section-label">
+        A Message From Me 🎥
+    </p>
+
+    <h2>
+        My Birthday Wish
+        <span>For You ❤️</span>
+    </h2>
+
+    <p class="video-intro">
+        There are some things I would rather say
+        to you than write down.
+    </p>
+
+    <div class="birthday-video-container">
+
+        <div class="video-card">
+
+            <div class="video-wrapper">
+
+                <video
+                    id="birthdayVideo"
+                    controls
+                    playsinline
+                    preload="metadata">
+
+                    <source
+                        src="media/birthday-wish.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support
+                    video playback.
+
+                </video>
+
+            </div>
+
+            <div class="video-message">
+
+                <div class="video-heart">
+                    ❤️
+                </div>
+
+                <h3>
+                    A little birthday wish from me
+                </h3>
+
+                <p>
+                    I wanted you to have something
+                    you could come back to whenever
+                    you miss me.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section> -->
+
+
+
+<!-- =====================================================
+     FINAL MESSAGE
+===================================================== -->
+
+<section class="final-section">
+
+    <div class="final-background"></div>
+
+    <div class="final-content">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+
+        <p class="final-small">
+            Before you leave...
+        </p>
+
+
+        <h2>
+            There's just
+            <span>one more thing.</span>
+        </h2>
+
+
+        <p class="final-message">
+
+            I don't know what the future
+            has planned for us.
+
+            <br><br>
+
+            But if I get to choose...
+
+            <br><br>
+
+            I choose more conversations.
+
+            <br>
+
+            More laughter.
+
+            <br>
+
+            More memories.
+
+            <br>
+
+            More stupid arguments.
+
+            <br>
+
+            More late-night talks.
+
+            <br>
+
+            More moments where
+            we forget about everything else.
+
+            <br><br>
+
+            And most importantly...
+
+            <br>
+
+            <strong>
+                More time with you. ❤️
+            </strong>
+
+        </p>
+
+
+        <h1>
+
+            Happy Birthday,
+
+            <span>
+                I Love You ❤️
+            </span>
+
+        </h1>
+
+
+        <p class="forever">
+            This is just one chapter
+            of our story.
+
+            <br>
+
+            The best parts are
+            still waiting for us.
+
+            ❤️
+
+        </p>
+
+
+        <p class="signature">
+            With all my heart,<br>
+            Your Partner... ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
