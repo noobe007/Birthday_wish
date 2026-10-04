@@ -13,7 +13,7 @@
 */
 
 const birthdayDate =
-    new Date("October 4, 2026 00:00:00").getTime();
+    new Date("October 5, 2026 00:00:00").getTime();
 
 
 
