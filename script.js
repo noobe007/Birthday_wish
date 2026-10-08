@@ -610,7 +610,7 @@ function startFireworksSequence() {
    TYPING LOVE LETTER
 ===================================================== */
 
-const loveLetter = `Happy Birthday, Aloy. ❤️
+const loveLetter = `Happy Birthday, name. ❤️
 
 Words will never be enough to explain what you mean to me.
 
@@ -628,7 +628,7 @@ I hope this new year of your life brings you happiness, peace, success, and ever
 
 And I hope I get to be there for many of those moments.
 
-Happy Birthday, Aloy. ❤️
+Happy Birthday, name. ❤️
 
 Here's to our memories.
 
